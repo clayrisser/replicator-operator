@@ -1,0 +1,7 @@
+apiVersion: replicator.siliconhills.dev/v1
+kind: Replicator
+metadata:
+  name: replicator-sample
+spec:
+  # Add fields here
+  foo: bar

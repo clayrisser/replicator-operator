@@ -1,0 +1,129 @@
+{
+  "name": "@operators/replicator",
+  "version": "0.0.1",
+  "description": "replicate resources across kubernetes",
+  "keywords": [
+    "kustomize-operator"
+  ],
+  "homepage": "https://github.com/silicon-hills/replicator-operator",
+  "bugs": {
+    "url": "https://github.com/silicon-hills/replicator-operator/issues",
+    "email": "hello@nuevesolutions.org"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Silicon Hills LLC",
+    "email": "hello@nuevesolutions.org",
+    "url": "https://nuevesolutions.org"
+  },
+  "contributors": [
+    "Jam Risser <jam@codejam.ninja> (https://codejam.ninja)"
+  ],
+  "bin": {
+    "kustomize-operator": "bin/kustomizeOperator.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/replicator-operator"
+  },
+  "scripts": {
+    "build": "make -s build",
+    "clean": "make -s clean",
+    "coverage": "make -s coverage",
+    "format": "make -s format",
+    "inc": "make -s inc",
+    "lint": "make -s lint",
+    "make": "make",
+    "prepare": "make -s prepare",
+    "purge": "make -s purge",
+    "report": "make -s report",
+    "spellcheck": "make -s spellcheck",
+    "start": "make -s start",
+    "test": "make -s test",
+    "test:ui": "make test-ui",
+    "test:watch": "make -s test-watch"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@dot-i/k8s-operator": "^1.0.17",
+    "@kubernetes/client-node": "^0.12.3",
+    "core-js": "^3.8.1",
+    "execa": "^4.0.3",
+    "fs-extra": "^9.0.1",
+    "ora": "^5.1.0",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/fs-extra": "^9.0.5",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.12",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-plugin-macros": "^3.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "cloc": "^2.7.0",
+    "cspell": "^4.2.5",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "jest-sonar-reporter": "^2.0.0",
+    "lockfile-lint": "^4.3.7",
+    "majestic": "^1.8.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.2",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "jest": {
+    "testRegex": "((/(tests|__tests__)((/|/[^_.\n][^/\n]*(/[^_.\n][^/\n]+)*/)[^_.\n][^/\n]*))|((/|/.*/)(([^_.\n][^/\n]*.(spec|test))|(spec|test)))).[jt]sx?$",
+    "testEnvironment": "node",
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/es/",
+      "<rootDir>/lib/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/_setup.ts"
+    ]
+  },
+  "jestSonar": {
+    "reportPath": "node_modules/.tmp/reports",
+    "reportFile": "test-report.xml",
+    "indent": 4
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "docker": {
+    "name": "replicator-operator",
+    "registry": "codejamninja"
+  }
+}

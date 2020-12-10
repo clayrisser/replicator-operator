@@ -1,0 +1,24 @@
+# permissions for end users to edit replicators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: replicator-editor-role
+rules:
+  - apiGroups:
+      - replicator.siliconhills.dev
+    resources:
+      - replicators
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - replicator.siliconhills.dev
+    resources:
+      - replicators/status
+    verbs:
+      - get
