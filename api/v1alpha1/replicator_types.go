@@ -26,19 +26,27 @@ import (
 // ReplicatorSpec defines the desired state of Replicator
 type ReplicatorSpec struct {
 	// replicate from resource
-	From ResourceQuery `json:"from,omitempty"`
+	From FromResourceQuery `json:"from,omitempty"`
 
 	// replicate to resource
-	To ResourceQuery `json:"to,omitempty"`
+	To ToResourceQuery `json:"to,omitempty"`
 }
 
-type ResourceQuery struct {
+type FromResourceQuery struct {
 	// resource api version
 	ApiVersion string `json:"apiVersion,omitempty"`
 
 	// resource kind
 	Kind string `json:"kind,omitempty"`
 
+	// resource name
+	Name string `json:"name,omitempty"`
+
+	// resource namespace
+	Namespace string `json:"namespace,omitempty"`
+}
+
+type ToResourceQuery struct {
 	// resource name
 	Name string `json:"name,omitempty"`
 

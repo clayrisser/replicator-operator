@@ -1,6 +1,6 @@
 {
   "name": "@operators/replicator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "replicate resources across kubernetes",
   "keywords": [
     "kustomize-operator"
@@ -52,6 +52,7 @@
     "@babel/runtime": "^7.12.5",
     "@dot-i/k8s-operator": "^1.0.17",
     "@kubernetes/client-node": "^0.12.3",
+    "bluebird": "^3.7.2",
     "core-js": "^3.8.1",
     "execa": "^4.0.3",
     "fs-extra": "^9.0.1",
@@ -68,6 +69,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
+    "@types/bluebird": "^3.5.33",
     "@types/fs-extra": "^9.0.5",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.12",

@@ -71,7 +71,7 @@ questions:
     label: 'replicator operator repository'
     group: Images
   - variable: images.replicatorOperator.tag
-    default: 0.0.1
+    default: 0.0.2
     description: ''
     type: string
     required: true

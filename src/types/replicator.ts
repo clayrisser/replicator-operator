@@ -16,7 +16,20 @@
 
 import { KubernetesObject } from '@kubernetes/client-node';
 
-export interface ReplicatorSpec {}
+export interface ToResourceQuery {
+  name?: string; // `json:"name,omitempty"`
+  namespace?: string; // `json:"namespace,omitempty"`
+}
+
+export interface FromResourceQuery extends ToResourceQuery {
+  apiVersion?: string; // string `json:"apiVersion,omitempty"`
+  kind?: string; // `json:"kind,omitempty"`
+}
+
+export interface ReplicatorSpec {
+  from?: FromResourceQuery; // FromResourceQuery `json:"from,omitempty"`
+  to?: ToResourceQuery; // ToResourceQuery `json:"to,omitempty"`
+}
 
 export interface ReplicatorResource extends KubernetesObject {
   spec?: ReplicatorSpec;

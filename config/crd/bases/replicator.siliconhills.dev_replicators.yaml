@@ -56,12 +56,6 @@ spec:
             to:
               description: replicate to resource
               properties:
-                apiVersion:
-                  description: resource api version
-                  type: string
-                kind:
-                  description: resource kind
-                  type: string
                 name:
                   description: resource name
                   type: string
