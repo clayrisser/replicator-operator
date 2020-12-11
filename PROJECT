@@ -1,6 +1,6 @@
 domain: siliconhills.dev
 layout: go.kubebuilder.io/v2
-projectName: replicator
+projectName: replicator-operator
 repo: github.com/silicon-hills/replicator-operator
 resources:
 - group: replicator

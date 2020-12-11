@@ -24,7 +24,7 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	replicatorv1 "github.com/silicon-hills/replicator-operator/api/v1"
+	replicatorv1alpha1 "github.com/silicon-hills/replicator-operator/api/v1alpha1"
 )
 
 // ReplicatorReconciler reconciles a Replicator object
@@ -48,6 +48,6 @@ func (r *ReplicatorReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) 
 
 func (r *ReplicatorReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&replicatorv1.Replicator{}).
+		For(&replicatorv1alpha1.Replicator{}).
 		Complete(r)
 }

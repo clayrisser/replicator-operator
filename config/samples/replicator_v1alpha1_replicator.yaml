@@ -1,4 +1,4 @@
-apiVersion: replicator.siliconhills.dev/v1
+apiVersion: replicator.siliconhills.dev/v1alpha1
 kind: Replicator
 metadata:
   name: replicator-sample
